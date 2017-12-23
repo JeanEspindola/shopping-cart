@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './../logo.svg';
 import './App.css';
-import Header from './Header/Header';
-import CartList from './Cart-List/CartList';
-import CartTotal from './Cart-Total/CartTotal';
+import Header from './Header/HeaderContainer';
+import CartList from './Cart-List/CartListContainer';
+import CartTotal from './Cart-Total/CartTotalContainer';
 
 const App = () => (
   <div className="App">
