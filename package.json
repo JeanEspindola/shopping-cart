@@ -2,6 +2,13 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanEspindola/shopping-cart.git"
+  },
+  "author": "Jean Espindola",
+  "license": "MIT",
+  "homepage": "https://github.com/JeanEspindola/shopping-cart#readme",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
