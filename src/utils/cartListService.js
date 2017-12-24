@@ -1,21 +1,18 @@
 import 'whatwg-fetch';
-import cartListData from './cart';
+import cartListData from './cart.json';
 
-const jsonPath = '/mock/cart';
+const url = '/mock/cart';
 const data = cartListData;
 
 class CartListService {
   static getCartList() {
     return fetch(
-      jsonPath,
+      url,
       {
-        method: 'GET'
-      }).then(response => {
-        return data;
-      }).catch(error => {
-        console.log('testeerro');
-        return error;
-      });
+        method: 'GET',
+      },
+    ).then(() => data)
+      .catch(error => error);
   }
 }
 
