@@ -7,9 +7,10 @@ import CartItem from '../Cart-Item/CartitemContainer';
 
 class CartList extends Component {
   render() {
+
     if (this.props.list.length === 0) {
       return (
-        <p>There are no links previously shortened.</p>
+        <p>There are no items in your cart.</p>
       );
     }
 
