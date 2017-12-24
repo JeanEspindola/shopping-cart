@@ -1,0 +1,13 @@
+.header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.header__title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.header__toolbar {
+  float: right;
+}

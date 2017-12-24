@@ -1,20 +1,18 @@
 import React from 'react';
-import logo from './../logo.svg';
+import { Jumbotron, Grid } from 'react-bootstrap';
 import './App.css';
 import Header from './Header/HeaderContainer';
 import CartList from './Cart-List/CartListContainer';
 import CartTotal from './Cart-Total/CartTotalContainer';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <Header />
-    <CartList />
-    <CartTotal />
-  </div>
+  <Jumbotron className="app">
+    <Grid>
+      <Header />
+      <CartList />
+      <CartTotal />
+    </Grid>
+  </Jumbotron>
 );
 
 export default App;
