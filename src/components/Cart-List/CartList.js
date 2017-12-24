@@ -2,12 +2,13 @@
 * Cart List Presentation Component.
 */
 import React, { Component } from 'react';
+import { Row, Col, Table } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import CartItem from '../Cart-Item/CartitemContainer';
+import './CartList.css';
 
 class CartList extends Component {
   render() {
-
     if (this.props.list.length === 0) {
       return (
         <p>There are no items in your cart.</p>
@@ -15,15 +16,35 @@ class CartList extends Component {
     }
 
     return (
-      <div>
-        <ul>
-          {this.props.list.map(item =>
-            <li key={item.id}>
-              {item.product}
-            </li>)}
-        </ul>
-        <CartItem />
-      </div>
+      <Row className="cartlist">
+        <Col xs={12}>
+          <Table className="cartlist__table">
+            <thead className="cartlist__table__header">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Comments</th>
+                <th>Price</th>
+                <th>Tax</th>
+                <th>Total Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.list.map(item =>
+                (<CartItem
+                  key={item.id}
+                  id={item.id}
+                  product={item.product}
+                  comments={item.comments}
+                  price={item.price}
+                  tax={item.tax}
+                  total={item.totalItem}
+                />))
+              }
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
     );
   }
 }
