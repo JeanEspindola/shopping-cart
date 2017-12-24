@@ -1,25 +1,29 @@
 [
   {
+    "id": "1",
     "product": "Product 1",
     "comments": "Comments 1",
     "price": 8.00,
     "tax": 19
   },
   {
+    "id": "2",
     "product": "Product 2",
     "comments": "Comments 2",
     "price": 11.00,
     "tax": 19
   },
   {
-    "product": "Product 1",
-    "comments": "Comments 1",
+    "id": "3",
+    "product": "Product 3",
+    "comments": "Comments 3",
     "price": 16.25,
     "tax": 7
   },
   {
-    "product": "Product 1",
-    "comments": "Comments 1",
+    "id": "4",
+    "product": "Product 4",
+    "comments": "Comments 4",
     "price": 12.00,
     "tax": 7
   }

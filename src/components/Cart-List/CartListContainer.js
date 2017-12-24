@@ -1,16 +1,11 @@
+/*
+* Cart List Container Component.
+*/
 import { connect } from 'react-redux';
 import CartList from './CartList';
-//import { listFetchData } from '../../actions/linkListActions';
 
 const mapStateToProps = state => ({
-  /*
-  items: state.listItems,
-  isLoading: state.listIsLoading,
-  */
+  list: state.cartListItems,
 });
 
-const mapDispatchToProps = dispatch => ({
-  //fetchData: () => dispatch(listFetchData()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartList);
+export default connect(mapStateToProps, null)(CartList);
