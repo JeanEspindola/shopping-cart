@@ -1,8 +1,6 @@
 class MathHelperService {
   static arrayTaxFilter(array, tax) {
-    return array.filter(function (item) {
-      return item.tax === tax;
-    });
+    return array.filter(item => item.tax === tax);
   }
 
   static arrayTaxSummed(array, tax, value) {

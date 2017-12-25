@@ -9,7 +9,7 @@ export function loadCartSuccess(list) {
 }
 
 export function loadCartList() {
-  return (dispatch) => cartListService.getCartList().then((cartList) => {
+  return dispatch => cartListService.getCartList().then((cartList) => {
     dispatch(loadCartSuccess(cartList));
   }).catch((error) => {
     throw (error);

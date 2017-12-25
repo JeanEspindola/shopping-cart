@@ -5,6 +5,6 @@ export default {
     tax7: 0,
     tax19: 0,
     taxTotal: 0,
-    grandTotal: 0
+    grandTotal: 0,
   },
 };

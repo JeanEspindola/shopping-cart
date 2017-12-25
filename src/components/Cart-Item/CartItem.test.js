@@ -9,7 +9,7 @@ describe('CartItem', () => {
     comments: 'comments1',
     price: 5.00,
     tax: 7,
-    total: 5.35
+    total: 5.35,
   };
   let Component;
 
