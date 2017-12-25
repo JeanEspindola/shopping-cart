@@ -3,22 +3,24 @@ import { shallow } from 'enzyme';
 import CartItem from './CartItem';
 
 describe('CartItem', () => {
-  const id = 1;
-  const product = 'product1';
-  const comments = 'comments1';
-  const price = 5.00;
-  const tax = 7;
-  const total = 5.35;
+  const item = {
+    id: 1,
+    product: 'product1',
+    comments: 'comments1',
+    price: 5.00,
+    tax: 7,
+    total: 5.35
+  };
   let Component;
 
   beforeEach(() => {
     Component = shallow(<CartItem
-      id={id}
-      product={product}
-      comments={comments}
-      price={price}
-      tax={tax}
-      total={total}
+      id={item.id}
+      product={item.product}
+      comments={item.comments}
+      price={item.price}
+      tax={item.tax}
+      total={item.total}
     />);
   });
 
