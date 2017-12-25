@@ -6,13 +6,9 @@ import PropTypes from 'prop-types';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import cartListService from '../../utils/cartListService';
 import './CartTotal.css';
+import initialState from '../../reducers/initialState';
 
-let totalResults = {
-  netTotal: 0,
-  tax7: 0,
-  tax19: 0,
-  grandTotal: 0
-};
+let totalResults = initialState.total;
 
 class CartTotal extends Component {
   componentWillReceiveProps(newProps) {
@@ -31,7 +27,7 @@ class CartTotal extends Component {
         <hr className="total__divider" />
         <Row className="total__tax">
           <Col xs={6}>Tax</Col>
-          <Col xs={6} className="total__values">{totalResults.tax7 + totalResults.tax19}€</Col>
+          <Col xs={6} className="total__values">{totalResults.taxTotal}€</Col>
         </Row>
         <Row className="total__tax__7">
           <Col xs={6}><Glyphicon glyph="arrow-right" /> 7%</Col>

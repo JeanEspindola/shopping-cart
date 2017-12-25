@@ -26,6 +26,7 @@ class CartListService {
     results.grandTotal = +(totalTax7 * 1.07).toFixed(2) + +(totalTax19 * 1.19).toFixed(2);
     results.tax7 = +(totalTax7 * 0.07).toFixed(2);
     results.tax19 = +(totalTax19 * 0.19).toFixed(2);
+    results.taxTotal = results.tax7 + results.tax19;
 
     return results;
   }
