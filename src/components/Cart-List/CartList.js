@@ -26,7 +26,8 @@ class CartList extends Component {
                 <th>Comments</th>
                 <th>Price</th>
                 <th>Tax</th>
-                <th>Total Item</th>
+                <th className="cartlist__table__header__total">Total Item</th>
+                <th className="cartlist__table__header__actions" />
               </tr>
             </thead>
             <tbody className="cartlist__table__body">
