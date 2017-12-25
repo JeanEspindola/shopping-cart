@@ -12,12 +12,25 @@ let totalResults = initialState.total;
 
 class CartTotal extends Component {
   componentWillReceiveProps(newProps) {
-    if (newProps.list.length !== 0 && newProps.list !== this.props.list) {
+    if (newProps.list.length === 0) {
+      totalResults = initialState.total;
+    } else if (newProps.list !== this.props.list) {
       totalResults = cartListService.getTotalValues(newProps.list);
     }
   }
 
   render() {
+    if (totalResults.netTotal === 0) {
+      return (
+        <div className="total empty">
+          <Row className="total__net">
+            <Col xs={6}>Net Total</Col>
+            <Col xs={6} className="total__values">{totalResults.netTotal}€</Col>
+          </Row>
+        </div>
+      );
+    }
+
     return (
       <div className="total">
         <Row className="total__net">
