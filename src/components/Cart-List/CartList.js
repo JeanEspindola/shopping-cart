@@ -29,7 +29,7 @@ class CartList extends Component {
                 <th>Total Item</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="cartlist__table__body">
               {this.props.list.map(item =>
                 (<CartItem
                   key={item.id}

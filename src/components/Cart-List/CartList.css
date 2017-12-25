@@ -2,3 +2,8 @@
   background-color: #25258A;
   color: white;
 }
+
+.cartlist__table__body {
+  background-color: white;
+  color: gray;
+}

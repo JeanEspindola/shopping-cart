@@ -11,9 +11,9 @@ class CartItem extends Component {
         <th>{this.props.id}</th>
         <th>{this.props.product}</th>
         <th>{this.props.comments}</th>
-        <th>{this.props.price} €</th>
-        <th>{this.props.tax} %</th>
-        <th>{this.props.total} €</th>
+        <th>{this.props.price}€</th>
+        <th>{this.props.tax}%</th>
+        <th>{this.props.total}€</th>
       </tr>
     );
   }
