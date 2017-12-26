@@ -19,8 +19,8 @@ class CartListService {
   static getTotalValues(list) {
     const results = {};
 
-    const totalTax7 = mathHelperService.arrayTaxSummed(list, 7, 'price').total;
-    const totalTax19 = mathHelperService.arrayTaxSummed(list, 19, 'price').total;
+    const totalTax7 = mathHelperService.arrayTaxSummed(list, 7, 'price');
+    const totalTax19 = mathHelperService.arrayTaxSummed(list, 19, 'price');
 
     results.netTotal = totalTax7 + totalTax19;
     results.grandTotal = +(totalTax7 * 1.07).toFixed(2) + +(totalTax19 * 1.19).toFixed(2);

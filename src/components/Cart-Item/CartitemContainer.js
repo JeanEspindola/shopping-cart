@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
+import { deleteCartItem } from '../../actions/cartListAction';
 import CartItem from './CartItem';
 
-const mapStateToProps = state => ({
-});
-
 const mapDispatchToProps = dispatch => ({
+  onDeleteItem: itemId => dispatch(deleteCartItem(itemId)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartItem);
+export default connect(null, mapDispatchToProps)(CartItem);

@@ -7,6 +7,16 @@ import { Button, Glyphicon } from 'react-bootstrap';
 import './CartItem.css';
 
 class CartItem extends Component {
+  constructor(props) {
+    super(props);
+    this.deleteItem = this.deleteItem.bind(this);
+  }
+
+  deleteItem(e) {
+    e.preventDefault();
+    this.props.onDeleteItem(this.props.id);
+  }
+
   render() {
     return (
       <tr className="item">
@@ -21,7 +31,7 @@ class CartItem extends Component {
             <Glyphicon glyph="pencil" />
           </Button>
           &nbsp;
-          <Button bsStyle="danger" bsSize="xsmall">
+          <Button bsStyle="danger" bsSize="xsmall" onClick={this.deleteItem}>
             <Glyphicon glyph="remove" />
           </Button>
         </td>
@@ -37,6 +47,7 @@ CartItem.propTypes = {
   price: PropTypes.number.isRequired,
   tax: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
+  onDeleteItem: PropTypes.func.isRequired,
 };
 
 export default CartItem;
