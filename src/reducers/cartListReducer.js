@@ -1,4 +1,4 @@
-import { CART_FETCH_DATA_SUCCESS, ITEM_DELETE_SUCCESS } from '../utils/constants';
+import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS } from '../utils/constants';
 import initialState from './initialState';
 
 export function cartListItems(state = initialState.list, action) {
@@ -11,6 +11,8 @@ export function cartListItems(state = initialState.list, action) {
       newState.splice(indexCartItemToDelete, 1);
       return newState;
     }
+    case CART_CLEAR_SUCCESS:
+      return initialState.list;
     default:
       return state;
   }

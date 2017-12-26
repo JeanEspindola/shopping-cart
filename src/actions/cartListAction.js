@@ -1,6 +1,5 @@
 import cartListService from '../utils/cartListService';
-import { CART_FETCH_DATA_SUCCESS, ITEM_DELETE_SUCCESS } from '../utils/constants';
-import initialState from '../reducers/initialState';
+import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS } from '../utils/constants';
 
 export function loadCartSuccess(list) {
   return {
@@ -16,6 +15,12 @@ export function deleteItemSuccess(itemId) {
   };
 }
 
+export function clearCartSuccess() {
+  return {
+    type: CART_CLEAR_SUCCESS,
+  };
+}
+
 export function loadCartList() {
   return dispatch => cartListService.getCartList().then((cartList) => {
     dispatch(loadCartSuccess(cartList));
@@ -25,7 +30,7 @@ export function loadCartList() {
 }
 
 export function cleanUpCartList() {
-  return dispatch => dispatch(loadCartSuccess(initialState.list));
+  return dispatch => dispatch(clearCartSuccess());
 }
 
 export function deleteCartItem(itemId) {
