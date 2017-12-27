@@ -3,24 +3,26 @@
 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CartItemForm from '../Cart-Item-Form/CartItemFormContainer';
 import { Row, Col, ButtonToolbar, Button, Glyphicon } from 'react-bootstrap';
+import CartItemForm from '../Cart-Item-Form/CartItemFormContainer';
 import './Header.css';
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
+
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
-  };
+  }
 
   render() {
-    return(
+    return (
       <div>
         <Row className="header">
           <Col xs={6}>
@@ -41,12 +43,7 @@ class Header extends Component {
             </ButtonToolbar>
           </Col>
         </Row>
-        <CartItemForm
-          show={this.state.isOpen}
-          onClose={this.toggleModal}
-          title='Add Product'
-        >
-        </CartItemForm>
+        <CartItemForm show={this.state.isOpen} onClose={this.toggleModal} title="Add Product" />
       </div>
     );
   }

@@ -3,14 +3,13 @@ import { shallow } from 'enzyme';
 import CartTotal from './CartTotal';
 
 describe('CartTotal', () => {
-  const list = [{ id: 1 }, { id: 2 }];
+  let list;
   let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<CartTotal list={list} />);
-  });
-
   it('renders CartTotal without crashing', () => {
+    list = [];
+    wrapper = shallow(<CartTotal list={list} />);
+
     expect(wrapper.length).toEqual(1);
   });
 });

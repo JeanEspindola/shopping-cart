@@ -15,7 +15,7 @@ describe('cartListService', () => {
   ];
 
   it('get total values on an empty list', () => {
-    expect(cartListService.getTotalValues([])).toEqual({});
+    expect(cartListService.getTotalValues([])).toEqual(0);
   });
 
   it('get total values on a full list', () => {

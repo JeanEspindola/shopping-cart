@@ -7,6 +7,10 @@ class MathHelperService {
     const filtered = this.arrayTaxFilter(array, tax);
     return filtered.reduce((a, b) => (a + b[value]), 0);
   }
+
+  static getTotalItem(value, tax) {
+    return +(parseInt(value, 10) + ((value * tax) / 100)).toFixed(2);
+  }
 }
 
 export default MathHelperService;

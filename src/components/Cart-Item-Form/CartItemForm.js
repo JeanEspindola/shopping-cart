@@ -14,18 +14,20 @@ class CartItemForm extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.saveProduct = this.saveProduct.bind(this);
+    this.cancel = this.cancel.bind(this);
   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  saveProduct = () => {
+  saveProduct() {
     this.props.onSaveItem(this.state);
     this.props.onClose();
-  };
+  }
 
-  cancel = () => {
+  cancel() {
     this.setState({
       product: '',
       comments: '',
@@ -33,10 +35,9 @@ class CartItemForm extends Component {
       tax: '',
     });
     this.props.onClose();
-  };
+  }
 
   render() {
-    const { product, comments, price, tax } = this.state;
     return (
       <Modal show={this.props.show}>
         <Modal.Header>
@@ -52,7 +53,7 @@ class CartItemForm extends Component {
                 <FormControl
                   type="text"
                   placeholder="Add your product"
-                  value={product}
+                  value={this.state.product}
                   name="product"
                   onChange={this.onChange}
                 />
@@ -66,7 +67,7 @@ class CartItemForm extends Component {
                 <FormControl
                   type="text"
                   placeholder="Add comments for the product"
-                  value={comments}
+                  value={this.state.comments}
                   name="comments"
                   onChange={this.onChange}
                 />
@@ -81,7 +82,7 @@ class CartItemForm extends Component {
                   <FormControl
                     type="number"
                     placeholder="Price"
-                    value={price}
+                    value={this.state.price}
                     name="price"
                     onChange={this.onChange}
                   />
@@ -98,7 +99,7 @@ class CartItemForm extends Component {
                   <FormControl
                     type="number"
                     placeholder="Tax"
-                    value={tax}
+                    value={this.state.tax}
                     name="tax"
                     onChange={this.onChange}
                   />

@@ -6,26 +6,23 @@ import PropTypes from 'prop-types';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import cartListService from '../../utils/cartListService';
 import './CartTotal.css';
-import initialState from '../../reducers/initialState';
 
-let totalResults = initialState.total;
+let totalResults = 0;
 
 class CartTotal extends Component {
   componentWillReceiveProps(newProps) {
-    if (newProps.list.length === 0) {
-      totalResults = initialState.total;
-    } else if (newProps.list !== this.props.list) {
+    if (newProps.list !== this.props.list) {
       totalResults = cartListService.getTotalValues(newProps.list);
     }
   }
 
   render() {
-    if (totalResults.netTotal === 0) {
+    if (totalResults === 0) {
       return (
         <div className="total empty">
           <Row className="total__net">
-            <Col xs={6}>Net Total</Col>
-            <Col xs={6} className="total__values">{totalResults.netTotal}€</Col>
+            <Col xs={6} id="total">Net Total</Col>
+            <Col xs={6} className="total__values" id="value">0€</Col>
           </Row>
         </div>
       );

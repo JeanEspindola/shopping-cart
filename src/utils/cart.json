@@ -1,34 +1,26 @@
 [
   {
-    "id": 1,
     "product": "Cheese",
     "comments": "Dutch cheese.",
-    "price": 8.00,
-    "tax": 19,
-    "totalItem": 9.52
+    "price": "8.00",
+    "tax": "19"
   },
   {
-    "id": 2,
     "product": "Meat",
     "comments": "Beef and Pork.",
-    "price": 11.00,
-    "tax": 19,
-    "totalItem": 13.09
+    "price": "11.00",
+    "tax": "19"
   },
   {
-    "id": 3,
     "product": "Beer",
     "comments": "Six Pack Paulaner",
-    "price": 16.25,
-    "tax": 7,
-    "totalItem": 17.39
+    "price": "16.25",
+    "tax": "7"
   },
   {
-    "id": 4,
     "product": "Water",
     "comments": "3 gallons",
-    "price": 12.00,
-    "tax": 7,
-    "totalItem": 12.84
+    "price": "12.00",
+    "tax": "7"
   }
 ]

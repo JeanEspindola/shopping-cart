@@ -21,7 +21,7 @@ export function clearCartSuccess() {
   };
 }
 
-export function addCartItemSuccess (item) {
+export function addCartItemSuccess(item) {
   return {
     type: ITEM_SUBMIT_SUCCESS,
     item,
