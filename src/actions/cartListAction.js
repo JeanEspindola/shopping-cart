@@ -1,5 +1,5 @@
 import cartListService from '../utils/cartListService';
-import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS } from '../utils/constants';
+import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS, ITEM_SUBMIT_SUCCESS } from '../utils/constants';
 
 export function loadCartSuccess(list) {
   return {
@@ -21,6 +21,13 @@ export function clearCartSuccess() {
   };
 }
 
+export function addCartItemSuccess (item) {
+  return {
+    type: ITEM_SUBMIT_SUCCESS,
+    item,
+  };
+}
+
 export function loadCartList() {
   return dispatch => cartListService.getCartList().then((cartList) => {
     dispatch(loadCartSuccess(cartList));
@@ -31,6 +38,10 @@ export function loadCartList() {
 
 export function cleanUpCartList() {
   return dispatch => dispatch(clearCartSuccess());
+}
+
+export function addCartItem(item) {
+  return dispatch => dispatch(addCartItemSuccess(item));
 }
 
 export function deleteCartItem(itemId) {
