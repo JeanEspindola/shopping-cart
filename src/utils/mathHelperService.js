@@ -5,12 +5,7 @@ class MathHelperService {
 
   static arrayTaxSummed(array, tax, value) {
     const filtered = this.arrayTaxFilter(array, tax);
-    let total = 0;
-
-    if (filtered.length > 0) {
-      total = filtered.reduce((a, b) => ({ value: a[value] + b[value] })).value;
-    }
-    return total;
+    return filtered.reduce((a, b) => (a + b[value]), 0);
   }
 }
 

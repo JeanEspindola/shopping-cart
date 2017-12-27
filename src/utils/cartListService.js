@@ -19,14 +19,16 @@ class CartListService {
   static getTotalValues(list) {
     const results = {};
 
-    const totalTax7 = mathHelperService.arrayTaxSummed(list, 7, 'price');
-    const totalTax19 = mathHelperService.arrayTaxSummed(list, 19, 'price');
+    if (list.length > 0) {
+      const totalTax7 = mathHelperService.arrayTaxSummed(list, 7, 'price');
+      const totalTax19 = mathHelperService.arrayTaxSummed(list, 19, 'price');
 
-    results.netTotal = totalTax7 + totalTax19;
-    results.grandTotal = +(totalTax7 * 1.07).toFixed(2) + +(totalTax19 * 1.19).toFixed(2);
-    results.tax7 = +(totalTax7 * 0.07).toFixed(2);
-    results.tax19 = +(totalTax19 * 0.19).toFixed(2);
-    results.taxTotal = results.tax7 + results.tax19;
+      results.netTotal = totalTax7 + totalTax19;
+      results.tax7 = +(totalTax7 * 0.07).toFixed(2);
+      results.tax19 = +(totalTax19 * 0.19).toFixed(2);
+      results.taxTotal = +(results.tax7 + results.tax19).toFixed(2);
+      results.grandTotal = results.netTotal + results.taxTotal;
+    }
 
     return results;
   }
