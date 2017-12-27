@@ -1,5 +1,8 @@
 /*
 * Cart Total Presentation Component.
+*
+* Renders the total values based on the props received.
+*
 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -10,6 +13,10 @@ import './CartTotal.css';
 let totalResults = 0;
 
 class CartTotal extends Component {
+  /*
+  * Using this lifecycle method, I can check when the props were updated, then recalculate
+  * the values so the component is re-rendered.
+  * */
   componentWillReceiveProps(newProps) {
     if (newProps.list !== this.props.list) {
       totalResults = cartListService.getTotalValues(newProps.list);

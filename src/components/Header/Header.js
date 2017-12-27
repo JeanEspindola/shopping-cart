@@ -1,5 +1,9 @@
 /*
-* Header Container Component.
+* Header Presentation Component.
+*
+* Renders the Header with clear cart button.
+* Injects the CartForm as child component and holds the control of the modal.
+*
 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

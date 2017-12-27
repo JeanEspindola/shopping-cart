@@ -1,3 +1,9 @@
+/*
+* App:
+*
+* Initialize the UI with Grid and add the child components.
+*
+* */
 import React from 'react';
 import { Jumbotron, Grid } from 'react-bootstrap';
 import './App.css';

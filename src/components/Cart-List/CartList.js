@@ -1,5 +1,8 @@
 /*
 * Cart List Presentation Component.
+*
+* Renders the list and passes values to CartItem, child component.
+*
 */
 import React from 'react';
 import { Row, Col, Table } from 'react-bootstrap';

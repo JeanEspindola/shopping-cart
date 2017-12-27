@@ -1,3 +1,12 @@
+/*
+* Cart Item Form Presentation Component.
+*
+* Renders the modal form to add a new product.
+* There are not so many validations, product and comments are string fields,
+* while price and tax are number. But I'm not validating the number of digits here.
+* I assume the products have 2 decimal digits and taxes as only 7 or 19.
+*
+*/
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Button, Form, FormGroup, FormControl, Col, ControlLabel, InputGroup } from 'react-bootstrap';

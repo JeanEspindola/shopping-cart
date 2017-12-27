@@ -1,5 +1,9 @@
 /*
 * Header Container Component.
+*
+* Connects the component with redux.
+* Dispatches the cleanUpCartList action.
+*
 */
 import { connect } from 'react-redux';
 import { cleanUpCartList } from '../../actions/cartListAction';

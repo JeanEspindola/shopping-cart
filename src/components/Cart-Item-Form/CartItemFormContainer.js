@@ -1,3 +1,10 @@
+/*
+* Cart Item Form Container Component.
+*
+* Connects the component with redux.
+* Dispatches addCartItem action.
+*
+*/
 import { connect } from 'react-redux';
 import { addCartItem } from '../../actions/cartListAction';
 import CartItemForm from './CartItemForm';

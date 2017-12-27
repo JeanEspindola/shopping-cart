@@ -1,5 +1,8 @@
 /*
 * Cart Item Presentation Component.
+*
+* Renders each element of the list with buttons for actions.
+*
 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
