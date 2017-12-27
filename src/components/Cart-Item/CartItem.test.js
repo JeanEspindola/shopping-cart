@@ -11,6 +11,8 @@ describe('CartItem', () => {
     tax: 7,
     total: 5.35,
   };
+  const mockDeleteItem = jest.fn;
+
   let Component;
 
   beforeEach(() => {
@@ -21,6 +23,7 @@ describe('CartItem', () => {
       price={item.price}
       tax={item.tax}
       total={item.total}
+      onDeleteItem={mockDeleteItem}
     />);
   });
 
