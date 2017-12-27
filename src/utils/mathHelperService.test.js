@@ -31,6 +31,6 @@ describe('mathHelperService', () => {
   });
 
   it('gets total price value with tax', () => {
-    expect(mathHelperService.getTotalItem('10', '7')).toEqual(10.7);
+    expect(mathHelperService.getTotalItem(10, 7)).toEqual(10.7);
   });
 });

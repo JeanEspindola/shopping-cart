@@ -2,25 +2,25 @@
   {
     "product": "Cheese",
     "comments": "Dutch cheese.",
-    "price": "8.00",
-    "tax": "19"
+    "price": 8.00,
+    "tax": 19
   },
   {
     "product": "Meat",
     "comments": "Beef and Pork.",
-    "price": "11.00",
-    "tax": "19"
+    "price": 11.00,
+    "tax": 19
   },
   {
     "product": "Beer",
     "comments": "Six Pack Paulaner",
-    "price": "16.25",
-    "tax": "7"
+    "price": 16.25,
+    "tax": 7
   },
   {
     "product": "Water",
     "comments": "3 gallons",
-    "price": "12.00",
-    "tax": "7"
+    "price": 12.00,
+    "tax": 7
   }
 ]

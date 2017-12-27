@@ -58,7 +58,7 @@ class CartTotal extends Component {
 }
 
 CartTotal.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default CartTotal;

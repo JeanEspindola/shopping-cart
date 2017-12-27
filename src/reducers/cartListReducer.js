@@ -2,7 +2,7 @@ import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS, ITEM_
 import initialState from './initialState';
 import listHelperService from '../utils/listHelperService';
 
-export function cartListItems(state = initialState.list, action) {
+function cartListItems(state = initialState.list, action) {
   switch (action.type) {
     case CART_FETCH_DATA_SUCCESS: {
       const newState = listHelperService.listPrepare(action.list);
@@ -29,3 +29,5 @@ export function cartListItems(state = initialState.list, action) {
       return state;
   }
 }
+
+export default cartListItems;

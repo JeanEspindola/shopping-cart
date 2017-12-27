@@ -44,8 +44,8 @@ CartItem.propTypes = {
   id: PropTypes.number.isRequired,
   product: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  tax: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  tax: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
   onDeleteItem: PropTypes.func.isRequired,
 };

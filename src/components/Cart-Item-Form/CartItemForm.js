@@ -22,18 +22,30 @@ class CartItemForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  saveProduct() {
-    this.props.onSaveItem(this.state);
-    this.props.onClose();
-  }
-
-  cancel() {
+  cleanUpState() {
     this.setState({
       product: '',
       comments: '',
       price: '',
       tax: '',
     });
+  }
+
+  saveProduct() {
+    const productObject = {
+      product: this.state.product,
+      comments: this.state.comments,
+      price: parseInt(this.state.price, 10),
+      tax: parseInt(this.state.tax, 10),
+    };
+
+    this.props.onSaveItem(productObject);
+    this.cleanUpState();
+    this.props.onClose();
+  }
+
+  cancel() {
+    this.cleanUpState();
     this.props.onClose();
   }
 

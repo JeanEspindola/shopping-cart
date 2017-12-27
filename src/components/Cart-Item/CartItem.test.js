@@ -7,8 +7,8 @@ describe('CartItem', () => {
     id: 1,
     product: 'product1',
     comments: 'comments1',
-    price: '5.00',
-    tax: '7',
+    price: 5.00,
+    tax: 7,
     total: 5.35,
   };
   const mockDeleteItem = jest.fn;

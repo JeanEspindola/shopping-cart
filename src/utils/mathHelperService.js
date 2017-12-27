@@ -9,7 +9,7 @@ class MathHelperService {
   }
 
   static getTotalItem(value, tax) {
-    return +(parseInt(value, 10) + ((value * tax) / 100)).toFixed(2);
+    return +(value + ((value * tax) / 100)).toFixed(2);
   }
 }
 

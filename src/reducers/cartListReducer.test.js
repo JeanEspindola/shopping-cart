@@ -1,4 +1,4 @@
-import { cartListItems } from './cartListReducer';
+import cartListItems from './cartListReducer';
 import initialState from './initialState';
 
 describe('cartListReducer', () => {
@@ -7,9 +7,15 @@ describe('cartListReducer', () => {
 
   beforeEach(() => {
     list = [
-      { id: 1, product: 'a' },
-      { id: 2, product: 'b' },
-      { id: 3, product: 'c' },
+      {
+        id: 1, product: 'a', price: 10, tax: 7,
+      },
+      {
+        id: 2, product: 'b', price: 20, tax: 7,
+      },
+      {
+        id: 3, product: 'c', price: 30, tax: 7,
+      },
     ];
   });
 
@@ -29,14 +35,41 @@ describe('cartListReducer', () => {
     const itemId = 1;
     const expectedList = [
       {
-        id: 1, product: 'b', price: '20', tax: '7', totalItem: 21.4,
+        id: 1, product: 'b', price: 20, tax: 7, totalItem: 21.4,
       },
       {
-        id: 2, product: 'c', price: '30', tax: '7', totalItem: 32.1,
+        id: 2, product: 'c', price: 30, tax: 7, totalItem: 32.1,
       },
     ];
     state = list;
     state = cartListItems(state, { type: 'ITEM_DELETE_SUCCESS', itemId });
+    expect(state).toEqual(expectedList);
+  });
+
+  it('Reducer --> ITEM_SUBMIT_SUCCESS', () => {
+    const item = { product: 'd', price: 100, tax: 19 };
+    const currentList = [
+      {
+        id: 1, product: 'b', price: 20, tax: 7, totalItem: 21.4,
+      },
+      {
+        id: 2, product: 'c', price: 30, tax: 7, totalItem: 32.1,
+      },
+    ];
+    const expectedList = [
+      {
+        id: 1, product: 'b', price: 20, tax: 7, totalItem: 21.4,
+      },
+      {
+        id: 2, product: 'c', price: 30, tax: 7, totalItem: 32.1,
+      },
+      {
+        id: 3, product: 'd', price: 100, tax: 19, totalItem: 119,
+      },
+    ];
+
+    state = currentList;
+    state = cartListItems(state, { type: 'ITEM_SUBMIT_SUCCESS', item });
     expect(state).toEqual(expectedList);
   });
 
