@@ -29,4 +29,8 @@ describe('mathHelperService', () => {
   it('sums total prices per tax', () => {
     expect(mathHelperService.arrayTaxSummed(list, 7, 'price')).toEqual(40);
   });
+
+  it('gets total price value with tax', () => {
+    expect(mathHelperService.getTotalItem('10', '7')).toEqual(10.7);
+  });
 });

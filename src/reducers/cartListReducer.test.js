@@ -28,8 +28,12 @@ describe('cartListReducer', () => {
   it('Reducer --> ITEM_DELETE_SUCCESS', () => {
     const itemId = 1;
     const expectedList = [
-      { id: 2, product: 'b' },
-      { id: 3, product: 'c' },
+      {
+        id: 1, product: 'b', price: '20', tax: '7', totalItem: 21.4,
+      },
+      {
+        id: 2, product: 'c', price: '30', tax: '7', totalItem: 32.1,
+      },
     ];
     state = list;
     state = cartListItems(state, { type: 'ITEM_DELETE_SUCCESS', itemId });
