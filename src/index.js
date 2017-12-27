@@ -1,3 +1,10 @@
+/*
+* Index
+*
+* Where the application is bootstrapped with the provider.
+* It dispatch the cart list load as the application starts to run.
+*
+* */
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import React from 'react';

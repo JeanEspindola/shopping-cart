@@ -1,3 +1,9 @@
+/*
+* Cart List Service:
+*
+* Functions available to use on the list. Separation of concerns.
+*
+* */
 import 'whatwg-fetch';
 import mathHelperService from './mathHelperService';
 import cartListData from './cart.json';
@@ -6,6 +12,11 @@ const url = '/mock/cart';
 const data = cartListData;
 
 class CartListService {
+  /*
+  * Here I'm using fetchAPI to pretend I'm getting values from a real URL. In the then,
+  * I'm returning the values I have on the mock json file. Later if data comes from the
+  * WEB, I have only to make some changes here to make it work.
+  * */
   static getCartList() {
     return fetch(
       url,
@@ -16,6 +27,9 @@ class CartListService {
       .catch(error => error);
   }
 
+  /*
+  * Takes the list and return an object with all values calculated for the CartTotal component.
+  * */
   static getTotalValues(list) {
     let retResult = 0;
 

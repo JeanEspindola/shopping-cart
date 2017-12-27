@@ -21,19 +21,4 @@ describe('mathHelperService', () => {
     ];
     expect(listHelperService.listPrepare(list)).toEqual(expectedList);
   });
-
-  it('remove the id element from the objects', () => {
-    const smallList = [
-      { id: 1, product: 'a' },
-      { id: 2, product: 'b' },
-      { id: 3, product: 'c' },
-    ];
-
-    const result = [
-      { product: 'a' },
-      { product: 'b' },
-      { product: 'c' },
-    ];
-    expect(listHelperService.arrayRemoveId(smallList)).toEqual(result);
-  });
 });

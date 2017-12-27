@@ -1,3 +1,9 @@
+/*
+* Cart List Action:
+*
+* All actions taken from components in order to access/modify the store.
+*
+* */
 import cartListService from '../utils/cartListService';
 import { CART_FETCH_DATA_SUCCESS, CART_CLEAR_SUCCESS, ITEM_DELETE_SUCCESS, ITEM_SUBMIT_SUCCESS } from '../utils/constants';
 
