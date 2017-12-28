@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import CartItemForm from './CartItemForm';
 
 describe('CartItem', () => {
@@ -19,5 +20,6 @@ describe('CartItem', () => {
 
   it('renders CartItemForm without crashing', () => {
     expect(Component.length).toBeTruthy();
+    expect(shallowToJson(Component)).toMatchSnapshot();
   });
 });

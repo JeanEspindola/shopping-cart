@@ -30,11 +30,7 @@ class CartItem extends Component {
         <td>{this.props.tax}%</td>
         <td className="item__total">{this.props.total}€</td>
         <td className="item__actions">
-          <Button bsStyle="warning" bsSize="xsmall">
-            <Glyphicon glyph="pencil" />
-          </Button>
-          &nbsp;
-          <Button bsStyle="danger" bsSize="xsmall" onClick={this.deleteItem}>
+          <Button id="test" bsStyle="danger" bsSize="xsmall" onClick={this.deleteItem}>
             <Glyphicon glyph="remove" />
           </Button>
         </td>

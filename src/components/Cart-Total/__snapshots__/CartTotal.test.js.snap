@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartTotal renders CartTotal without crashing 1`] = `
+<div
+  className="total empty"
+>
+  <Row
+    bsClass="row"
+    className="total__net"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      id="total"
+      xs={6}
+    >
+      Net Total
+    </Col>
+    <Col
+      bsClass="col"
+      className="total__values"
+      componentClass="div"
+      id="value"
+      xs={6}
+    >
+      0€
+    </Col>
+  </Row>
+</div>
+`;

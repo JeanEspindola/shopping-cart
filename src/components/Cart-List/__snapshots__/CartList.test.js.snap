@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartList renders CartList without crashing 1`] = `
+<Row
+  bsClass="row"
+  className="cartlist"
+  componentClass="div"
+>
+  <Col
+    bsClass="col"
+    componentClass="div"
+    xs={12}
+  >
+    <Table
+      bordered={false}
+      bsClass="table"
+      className="cartlist__table"
+      condensed={false}
+      hover={false}
+      responsive={false}
+      striped={false}
+    >
+      <thead
+        className="cartlist__table__header"
+      >
+        <tr>
+          <th>
+            #
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Comments
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Tax
+          </th>
+          <th
+            className="cartlist__table__header__total"
+          >
+            Total Item
+          </th>
+          <th
+            className="cartlist__table__header__actions"
+          />
+        </tr>
+      </thead>
+      <tbody
+        className="cartlist__table__body"
+      >
+        <Connect(CartItem)
+          id={1}
+          key="1"
+        />
+        <Connect(CartItem)
+          id={2}
+          key="2"
+        />
+      </tbody>
+    </Table>
+  </Col>
+</Row>
+`;

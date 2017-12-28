@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem renders CartItemForm without crashing 1`] = `
+<Modal
+  animation={true}
+  autoFocus={true}
+  backdrop={true}
+  bsClass="modal"
+  dialogComponentClass={[Function]}
+  enforceFocus={true}
+  keyboard={true}
+  manager={
+    ModalManager {
+      "add": [Function],
+      "containers": Array [],
+      "data": Array [],
+      "handleContainerOverflow": true,
+      "hideSiblingNodes": true,
+      "isTopModal": [Function],
+      "modals": Array [],
+      "remove": [Function],
+    }
+  }
+  onHide={[Function]}
+  renderBackdrop={[Function]}
+  restoreFocus={true}
+  show={true}
+>
+  <ModalHeader
+    bsClass="modal-header"
+    closeButton={false}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      bsClass="modal-title"
+      componentClass="h4"
+    >
+      Add product
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody
+    bsClass="modal-body"
+    componentClass="div"
+  >
+    <Form
+      bsClass="form"
+      componentClass="form"
+      horizontal={true}
+      inline={false}
+    >
+      <FormGroup
+        bsClass="form-group"
+      >
+        <Col
+          bsClass="col"
+          componentClass={[Function]}
+          sm={2}
+        >
+          Product
+        </Col>
+        <Col
+          bsClass="col"
+          componentClass="div"
+          sm={4}
+        >
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            name="product"
+            onChange={[Function]}
+            placeholder="Add your product"
+            type="text"
+            value=""
+          />
+        </Col>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+      >
+        <Col
+          bsClass="col"
+          componentClass={[Function]}
+          sm={2}
+        >
+          Comments
+        </Col>
+        <Col
+          bsClass="col"
+          componentClass="div"
+          sm={10}
+        >
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            name="comments"
+            onChange={[Function]}
+            placeholder="Add comments for the product"
+            type="text"
+            value=""
+          />
+        </Col>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+      >
+        <Col
+          bsClass="col"
+          componentClass={[Function]}
+          sm={2}
+        >
+          Price
+        </Col>
+        <Col
+          bsClass="col"
+          componentClass="div"
+          sm={4}
+        >
+          <InputGroup
+            bsClass="input-group"
+          >
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="price"
+              onChange={[Function]}
+              placeholder="Price"
+              type="number"
+              value=""
+            />
+            <InputGroupAddon
+              bsClass="input-group-addon"
+            >
+              $
+            </InputGroupAddon>
+          </InputGroup>
+        </Col>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+      >
+        <Col
+          bsClass="col"
+          componentClass={[Function]}
+          sm={2}
+        >
+          Tax
+        </Col>
+        <Col
+          bsClass="col"
+          componentClass="div"
+          sm={4}
+        >
+          <InputGroup
+            bsClass="input-group"
+          >
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="tax"
+              onChange={[Function]}
+              placeholder="Tax"
+              type="number"
+              value=""
+            />
+            <InputGroupAddon
+              bsClass="input-group-addon"
+            >
+              (7 or 19)%
+            </InputGroupAddon>
+          </InputGroup>
+        </Col>
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter
+    bsClass="modal-footer"
+    componentClass="div"
+  >
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="primary"
+      disabled={false}
+      onClick={[Function]}
+    >
+      Save
+    </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="default"
+      disabled={false}
+      onClick={[Function]}
+    >
+      Cancel
+    </Button>
+  </ModalFooter>
+</Modal>
+`;

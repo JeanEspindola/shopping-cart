@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders Header without crashing 1`] = `
+<div>
+  <Row
+    bsClass="row"
+    className="header"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={6}
+    >
+      <span
+        className="header__title"
+      >
+        Your Cart
+      </span>
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={6}
+    >
+      <ButtonToolbar
+        bsClass="btn-toolbar"
+        className="header__toolbar"
+      >
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="danger"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <Glyphicon
+            bsClass="glyphicon"
+            glyph="trash"
+          />
+          Clear Cart
+        </Button>
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="primary"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <Glyphicon
+            bsClass="glyphicon"
+            glyph="plus"
+          />
+          Add New Product
+        </Button>
+      </ButtonToolbar>
+    </Col>
+  </Row>
+  <Connect(CartItemForm)
+    onClose={[Function]}
+    show={false}
+    title="Add Product"
+  />
+</div>
+`;

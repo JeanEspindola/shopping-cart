@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem renders CartItem without crashing 1`] = `
+<tr
+  className="item"
+>
+  <td>
+    1
+  </td>
+  <td>
+    product1
+  </td>
+  <td>
+    comments1
+  </td>
+  <td>
+    5
+    €
+  </td>
+  <td>
+    7
+    %
+  </td>
+  <td
+    className="item__total"
+  >
+    5.35
+    €
+  </td>
+  <td
+    className="item__actions"
+  >
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsSize="xsmall"
+      bsStyle="danger"
+      disabled={false}
+      id="test"
+      onClick={[Function]}
+    >
+      <Glyphicon
+        bsClass="glyphicon"
+        glyph="remove"
+      />
+    </Button>
+  </td>
+</tr>
+`;
