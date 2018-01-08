@@ -1,11 +1,8 @@
 .item:hover {
-  background-color: aliceblue;
-}
+  background-color: aliceblue; }
 
 .item__total {
-  text-align: right;
-}
+  text-align: right; }
 
 .item__actions {
-  text-align: right;
-}
+  text-align: right; }

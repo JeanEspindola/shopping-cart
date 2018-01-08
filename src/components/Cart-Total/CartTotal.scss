@@ -1,30 +1,38 @@
 .total {
   background-color: white;
   float: right;
-  width: 250px; }
+  width: 250px;
+}
 
 .empty {
-  height: 35px; }
+  height: 35px;
+}
 
 .total__divider {
   margin-bottom: 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .total__net {
   margin: 0 5px 0 5px;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 .total__grand {
   margin: 0 5px 0 5px;
   color: blue;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+}
 
 .total__tax {
-  margin: 0 5px 5px 5px; }
+  margin: 0 5px 5px 5px;
+}
 
 .total__tax__7, .total__tax__19 {
   color: gray;
-  margin: 0 5px 0 5px; }
+  margin: 0 5px 0 5px;
+}
 
 .total__values {
-  text-align: right; }
+  text-align: right;
+}
